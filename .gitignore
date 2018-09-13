@@ -5,6 +5,8 @@ data/*.png
 samples
 outputs
 
+.idea
+
 # Log
 logs
 

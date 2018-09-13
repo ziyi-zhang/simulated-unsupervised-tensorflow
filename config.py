@@ -25,13 +25,13 @@ data_arg.add_argument('--data_dir', type=str, default='data')
 data_arg.add_argument('--input_height', type=int, default=35)
 data_arg.add_argument('--input_width', type=int, default=55)
 data_arg.add_argument('--input_channel', type=int, default=1)
-data_arg.add_argument('--max_synthetic_num', type=int, default=-1)
+data_arg.add_argument('--max_synthetic_num', type=int, default=100)
 data_arg.add_argument('--real_image_dir', type=str, default="MPIIGaze")
 data_arg.add_argument('--synthetic_image_dir', type=str, default="UnityEyes")
 
 # Training / test parameters
 train_arg = add_argument_group('Training')
-train_arg.add_argument('--task', type=str, default='generative', 
+train_arg.add_argument('--task', type=str, default='generative',
                        choices=['generative', 'estimation'], help='')
 train_arg.add_argument('--is_train', type=str2bool, default=True, help='')
 train_arg.add_argument('--max_step', type=int, default=10000, help='')
@@ -51,7 +51,7 @@ train_arg.add_argument('--optimizer', type=str, default='adam', choices=['adam',
 
 # Misc
 misc_arg = add_argument_group('Misc')
-misc_arg.add_argument('--log_step', type=int, default=20, help='')
+misc_arg.add_argument('--log_step', type=int, default=1, help='')
 misc_arg.add_argument('--log_dir', type=str, default='logs')
 misc_arg.add_argument('--sample_dir', type=str, default='samples')
 misc_arg.add_argument('--output_dir', type=str, default='outputs')
