@@ -6,6 +6,7 @@ samples
 outputs
 
 .idea
+.DS_Store
 
 # Log
 logs
